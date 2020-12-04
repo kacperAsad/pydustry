@@ -1,0 +1,73 @@
+Server Controller Help
+help - print this command
+stop - stop Server Controller
+
+Mindustry Server Control Help
+help: Displays this command list.
+version: Displays server version info.
+exit: Exit the server application.
+stop: Stop hosting the server.
+host [mapname] [mode]: Open the server. Will default to survival and a random map if not specified.
+maps: Display all available maps.
+reloadmaps: Reload all maps from disk.
+status: Display server status.
+mods: Display all loaded mods.
+mod <name...>: Display information about a loaded plugin.
+js <script...>: Run arbitrary Javascript.
+say <message...>: Send a message to all players.
+pause <on/off>: Pause or unpause the game.
+rules [remove/add] [name] [value...]: List, remove or add global rules. These will apply regardless of map.
+fillitems [team]: Fill the core with items.
+playerlimit [off/somenumber]: Set the server player limit.
+config [name] [value...]: Configure server settings.
+subnet-ban [add/remove] [address]: Ban a subnet. This simply rejects all connections with IPs starting with some string.
+whitelisted: List the entire whitelist.
+whitelist-add <ID>: Add a player to the whitelist by ID.
+whitelist-remove <ID>: Remove a player to the whitelist by ID.
+shuffle [none/all/custom/builtin]: Set map shuffling mode.
+nextmap <mapname...>: Set the next map to be played after a game-over. Overrides shuffling.
+kick <username...>: Kick a person by name.
+ban <type-id/name/ip> <username/IP/ID...>: Ban a person.
+bans: List all banned IPs and IDs.
+unban <ip/ID>: Completely unban a person by IP or ID.
+pardon <ID>: Pardons a votekicked player by ID and allows them to join again.
+admin <add/remove> <username/ID...>: Make an online user admin
+admins: List all admins.
+players: List all players currently in game.
+runwave: Trigger the next wave.
+load <slot>: Load a save from a slot.
+save <slot>: Save game state to a slot.
+saves: List all saves in the save directory.
+gameover: Force a game over.
+info <IP/UUID/name...>: Find player info(s). Can optionally check for all names or IPs a player has had.
+search <name...>: Search players who have used part of a name.
+gc: Trigger a garbage collection. Testing only.
+yes: Run the last suggested incorrect command.
+
+Dedicated Server Configuration Options
+name: The server name as displayed on clients.
+desc: The server description, displayed under the name. Max 100 characters.
+port: The port to host on.
+autoUpdate: Whether to auto-update and exit when a new bleeding-edge update arrives.
+showConnectMessages: Whether to display connect/disconnect messages.
+enableVotekick: Whether votekick is enabled.
+startCommands: Commands run at startup. This should be a comma-separated list.
+crashReport: Whether to send crash reports.
+logging: Whether to log everything to files.
+strict: Whether strict mode is on - corrects positions and prevents duplicate UUIDs.
+antiSpam: Whether spammers are automatically kicked and rate-limited.
+interactRateWindow: Block interaction rate limit window, in seconds.
+interactRateLimit: Block interaction rate limit.
+interactRateKick: How many times a player must interact inside the window to get kicked.
+messageRateLimit: Message rate limit in seconds. 0 to disable.
+messageSpamKick: How many times a player must send a message before the cooldown to get kicked. 0 to disable.
+socketInput: Allows a local application to control this server through a local TCP socket.
+socketInputPort: The port for socket input.
+socketInputAddress: The bind address for socket input.
+allowCustomClients: Whether custom clients are allowed to connect.
+whitelist: Whether the whitelist is used.
+motd: The message displayed to people on connection.
+autosave: Whether the periodically save the map when playing.
+autosaveAmount: The maximum amount of autosaves. Older ones get replaced.
+autosaveSpacing: Spacing between autosaves in seconds.
+debug: Enable debug logging

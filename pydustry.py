@@ -1,7 +1,9 @@
 from socket import socket, create_connection, AF_INET, SOCK_DGRAM
 from struct import unpack
 from time import time
+
 class Server():
+
     def __init__(self, host, server_port = 6567, socketinput_port = 6859):
         self.host = host
         self.server = (host, server_port)
